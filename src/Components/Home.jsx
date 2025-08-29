@@ -4,6 +4,9 @@ import Footer from "./Footer";
 import { useTheme } from "./Theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import resume from "../assets/DEEPAK02.PDF"
+import logo from '../assets/Logo.png'
+
 
 
 
@@ -22,13 +25,15 @@ const Home = (props) => {
     <div className={`flex flex-col min-h-screen `}>
       {/* NAVBAR */}
       <nav className={`${theme === "light" ? "bg-gradient-to-r from-blue-200 via-blue-100 to-cyan-100" : "bg-gray-800"} 
-  w-full lg:fixed top-0 left-0 z-50 p-4 flex justify-between items-center`}>
+                        w-full lg:fixed top-0 left-0 z-50 p-4 flex justify-between items-center`}>
 
         {/* Logo */}
         <div className="text-2xl font-bold border-2 text-black">
 
           <NavLink to="/" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
-            DPK
+            <img
+            className="h-10"
+            src={logo} alt="" />
           </NavLink>
 
         </div>
@@ -136,8 +141,8 @@ const Home = (props) => {
 
           <a
             className=" p-1.5 text-white bg-blue-500 !no-underline hover:bg-blue-600 transition-colors duration-200 rounded hover:shadow-xl"
-            href="/Deepak.pdf"
-            download="Deepak_Chouhan_CV.pdf"
+            href={resume}
+            download="resume"
           >Download CV
           </a>
 
@@ -158,7 +163,7 @@ const Home = (props) => {
       <main
         id="about"
         className={`${theme === "light" ? "bg-gradient-to-t from-sky-100 via-slate-50 to-slate-100" : "bg-gradient-to-t from-slate-700 via-gray-800 to-gray-800"}
-         sm:p-12 lg:pr-10 lg:pt-0 p-2.5 scroll-mt-22`}>
+         sm:p-12 lg:pr-10 lg:pt-0 p-2.5 scroll-mt-22` }>
         <h2 className={`text-2xl font-bold  border-b-2 p-4 ${theme === "light" ? "text-black" : "text-white"}`}>
           About Me
         </h2>
@@ -175,14 +180,49 @@ const Home = (props) => {
 
           {/* Text */}
           <div className={`${theme === "light" ? "bg-amber-100" : "border-x-indigo-400"} p-6 rounded-lg shadow-md space-y-4 lg:w-[60%]  `}>
-            <p className={`${theme === "light" ? "text-black" : "text-white"} lg:text-xl`}>
-              Hi, I’m Deepak Chauhan, a passionate frontend developer who loves creating clean, responsive, and user-friendly web applications. I specialize in JavaScript, React (Vite), Tailwind CSS, and Bootstrap, and I enjoy turning ideas into engaging digital experiences.
-
-              I’m a curious learner who constantly explores new technologies and sharpens my problem-solving skills through continuous practice. My goal is to keep growing as a developer while contributing to impactful projects and learning from industry professionals.
+            <p className={`${theme === "light" ? "text-black" : "text-white"} lg:text-xl font-sans`}>
+              Hi, I’m Deepak Chauhan, a frontend developer passionate about building clean, responsive, and user-friendly web apps. I specialize in JavaScript, React (Vite), Tailwind CSS, and Bootstrap. I love turning ideas into engaging digital experiences while constantly learning and improving my problem-solving skills. My goal is to grow as a developer and contribute to impactful projects.
             </p>
-            <p className={`${theme === "light" ? "text-black" : "text-white"} lg:text-xl hidden xl:block`}>
+            {/* <p className={`${theme === "light" ? "text-black" : "text-white"} lg:text-xl hidden xl:block`}>
               I am eager to contribute my skills in a collaborative environment, gain real-world industry experience, and grow as a developer while adding value to every project I work on.
-            </p>
+            </p> */}
+          </div>
+        </div>
+
+        <div className="w-auto">
+
+          <div className={`p-2 ${theme === "light" ? "text-black" : "text-white"} `}>
+            <h1 className="p-1.5 ">Tech Stack</h1>  
+            <ul className={`${theme === "light" ? "text-black" : "text-white"} border-t-2 space-y-7`}>
+
+              <li>
+                <h3 className="p-1.5 ">Languages</h3>
+                <ul className={`${theme === "light" ? "text-black" : "text-white"} list-disc text-lg text-gray-800 space-y-2`}>
+                  <li>♨️Java</li>
+                  <li>⚡️JavaScript</li>
+                  <li>💻Python</li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>Libraries/Frameworks</h3>
+                 <ul className={`${theme === "light" ? "text-black" : "text-white"} list-disc text-lg text-gray-800 space-y-2`}>
+                  <li>⚛️React JS</li>
+                  <li>🎨Tailwind CSS</li>
+
+                </ul>
+              </li>
+
+              <li>
+                <h3>Database</h3>
+                 <ul className={`${theme === "light" ? "text-black" : "text-white"} list-disc text-lg text-gray-800 space-y-2`}>
+                  <li>🛢️SQL</li>
+                  <li>📁Google Firebase</li>
+
+                </ul>
+
+              </li>
+            </ul>
           </div>
         </div>
       </main>

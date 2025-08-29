@@ -9,7 +9,7 @@ const Cards = (props) => {
     return (
         <>
             <div className={`${theme === "light" ? "bg-gradient-to-r from-slate-300 via-gray-300 to-zinc-300" : "bg-gray-800"} 
-              flex-col justify-center gap-1 h-80 w-72 hover:scale-105 transition-transform duration-300  shadow-lg rounded-lg p-1.5`}>
+              flex-col justify-center gap-1 h-80 w-72 hover:scale-105 transition-transform duration-600  shadow-lg rounded-lg p-1.5`}>
                 <p className='font-bold text-xl'>{props.prjName}</p>
 
                 

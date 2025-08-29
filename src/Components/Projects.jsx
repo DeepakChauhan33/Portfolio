@@ -32,7 +32,7 @@ const Projects = () => {
           className="md:hidden  px-4 py-2 rounded mt-2 sm:mt-0 text-gray"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} className={`${theme === "light" ? "text-black" : "text-white"}`} />
         </button>
 
         {/* Desktop Nav Links */}

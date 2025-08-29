@@ -70,7 +70,7 @@ const Contact = () => {
           className="md:hidden  px-4 py-2 rounded mt-2 sm:mt-0 text-gray"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} className={`${theme === "light" ? "text-black" : "text-white"}`} />
         </button>
 
         {/* Desktop Nav Links */}
@@ -80,9 +80,7 @@ const Contact = () => {
               Home
             </NavLink>
           </li>
-          <li>
-
-          </li>
+        
           <li>
             <NavLink to="/projects" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
               Projects
@@ -154,10 +152,10 @@ const Contact = () => {
         <form
           onSubmit={handleSubmit}
           className={`${theme === "light" ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100" : "bg-gradient-to-r from-slate-600 via-gray-700 to-slate-600"}
-                       shadow-lg rounded-lg p-6 w-full lg:w-1/2`}
+                       shadow-md rounded-lg p-6 w-full lg:w-1/2`}
         >
           <h2 className={`text-2xl font-bold mb-6 ${theme=== "light" ? "text-black" : "text-white"} ${theme === "light" ? "border-b-2 border-blue-500 " : "border-b-2 border-b-green-50 "} pb-2`}>
-            Contact Us
+            Contact Me
           </h2>
 
           {/* Name */}
@@ -221,8 +219,8 @@ const Contact = () => {
 
         {/* Contact Details */}
         <div className={`${theme === "light" ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100" : "bg-gradient-to-r from-gray-700 via-gray-700 to-gray-700"}
-                          shadow-lg rounded-lg p-6 w-full lg:w-1/2`}>
-          <h2 className={`text-2xl font-bold mb-6 text-gray-800 border-b-2 border-green-500 pb-2
+                           rounded-lg p-6 w-full lg:w-1/2  `}>
+          {/* <h2 className={`text-2xl font-bold mb-6 text-gray-800 border-b-2 border-green-500 pb-2
             ${theme=== "light" ? "text-black" : "text-white"}`}>
             Contact Details
           </h2>
@@ -232,7 +230,9 @@ const Contact = () => {
           </p>
           <p className={`mb-4 ${theme=== "light" ? "text-black" : "text-white"}`}>
             <strong>Email:</strong> deep651965@gmail.com
-          </p>
+          </p> */}
+
+          <img src="https://assets.dochipo.com/editor/illustrations/contact-us/0eed5ca1-01f2-44d2-80da-d3c2062a7b50.png" alt="" />
 
         </div>
       </div>

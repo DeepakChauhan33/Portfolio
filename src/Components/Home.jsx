@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { useTheme } from "./Theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
-import resume from "../assets/DEEPAK.PDF"
+import resume from "../assets/DEEPAK.pdf"
 import logo from '../assets/Logo.png'
 
 

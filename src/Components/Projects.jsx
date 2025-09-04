@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Cards from './Cards';
 import Footer from './Footer';
 import { useTheme } from "./Theme";
+import logo from '../assets/Logo.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMoon, faSun}  from '@fortawesome/free-solid-svg-icons'
@@ -16,16 +17,18 @@ const Projects = () => {
       {/* NAVBAR */}
 
       <nav className={`${theme === "light" ? "bg-gradient-to-r from-blue-200 via-blue-100 to-cyan-100" : "bg-gray-800"} 
-         w-full lg:fixed top-0 left-0 z-50 p-4 flex justify-between items-center`}>
-
-        {/* Logo */}
-        <div className="text-2xl font-bold border-2 text-black">
-        
-                    <NavLink to="/" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
-                      DPK
-                    </NavLink>
-        
-                </div>
+                              w-full lg:fixed top-0 left-0 z-50 p-3 flex justify-between items-center`}>
+      
+              {/* Logo */}
+              <div className="text-2xl font-bold shadow-md  text-black">
+      
+                <NavLink to="/" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
+                  <img
+                  className="h-14"
+                  src={logo} alt="logo" />
+                </NavLink>
+      
+              </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -108,7 +111,7 @@ const Projects = () => {
       >
         <div className="max-w-8xl mx-auto px-4 text-center">
           <h1
-            className={`text-4xl font-extrabold mb-10 bg-transparent flex border-b-2 w-full p-3.5 `}
+            className={`text-4xl font-extrabold mb-10 bg-transparent flex border-b-2 w-full p-3.5 ${theme === "light" ? "text-gray-900" : "text-white"} `}
           >
             My Projects
           </h1>
@@ -120,16 +123,15 @@ const Projects = () => {
         sm:flex 
         max-w-7xl mx-auto sm:px-4 text-center mt-4 border-b-2`}>
 
-          {/* Cards Grid */}
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-7 ">
-            <Cards prjName="TODO List" lang1="HTML" lang2="CSS" lang3="JavaScript" />
-            <Cards prjName="Project 2" lang1="HTML" lang2="CSS" lang3="JavaScript" />
-            <Cards prjName="Project 3" lang1="Python" lang2="Django" lang3="PostgreSQL" />
+            <Cards prjName="TODO List" imgLink={"https://t4.ftcdn.net/jpg/02/89/04/39/360_F_289043915_62E4CSfMrMJeW3JFYnaYUcXZLmgV6iK3.jpg"} lang1="HTML" lang2="CSS" lang3="JavaScript" />
+            <Cards prjName="Project 2" imgLink={"https://designsandlines.co.uk/wp-content/uploads/2021/12/1-100-Half-solid-680x680.jpg"} lang1="HTML" lang2="CSS" lang3="JavaScript" />
+            <Cards prjName="Project 3" imgLink={"https://cdn.dnaindia.com/sites/default/files/2018/09/04/726933-438073-amazon.jpg?im=FitAndFill=(1200,900)"} lang1="Python" lang2="Django" lang3="PostgreSQL" />
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
       <Footer />
     </>
   );

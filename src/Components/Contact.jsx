@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import Footer from "./Footer";
 import { useTheme } from "./Theme";
+import logo from '../assets/Logo.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
@@ -53,17 +54,19 @@ const Contact = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className={`${theme === "light" ? "bg-gradient-to-r from-blue-200 via-blue-100 to-cyan-100" : "bg-gray-800"} 
-        w-full lg:fixed top-0 left-0 z-50 p-4 flex justify-between items-center`}>
-
-        {/* Logo */}
-        <div className="text-2xl font-bold border-2 text-black">
-        
-                    <NavLink to="/" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
-                      DPK
-                    </NavLink>
-        
-                </div>
+       <nav className={`${theme === "light" ? "bg-gradient-to-r from-blue-200 via-blue-100 to-cyan-100" : "bg-gray-800"} 
+                                    w-full lg:fixed top-0 left-0 z-50 p-3 flex justify-between items-center`}>
+            
+                    {/* Logo */}
+                    <div className="text-2xl font-bold shadow-md  text-black">
+            
+                      <NavLink to="/" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
+                        <img
+                        className="h-14"
+                        src={logo} alt="logo" />
+                      </NavLink>
+            
+                    </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -142,13 +145,11 @@ const Contact = () => {
 
 
 
-      {/* Contact Section */}
-
 
       <div className={`${theme === "light" ? "bg-gradient-to-t from-slate-100 via-slate-50 to-sky-100" : "bg-gradient-to-t from-gray-800 via-gray-800 to-slate-700"}
         lg:pt-34 flex flex-col lg:flex-row gap-8 lg:gap-16  items-start min-h-screen  p-6 lg:p-12`}>
 
-        {/* Contact Form */}
+
         <form
           onSubmit={handleSubmit}
           className={`${theme === "light" ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100" : "bg-gradient-to-r from-slate-600 via-gray-700 to-slate-600"}
@@ -220,18 +221,6 @@ const Contact = () => {
         {/* Contact Details */}
         <div className={`${theme === "light" ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100" : "bg-gradient-to-r from-gray-700 via-gray-700 to-gray-700"}
                            rounded-lg p-6 w-full lg:w-1/2  `}>
-          {/* <h2 className={`text-2xl font-bold mb-6 text-gray-800 border-b-2 border-green-500 pb-2
-            ${theme=== "light" ? "text-black" : "text-white"}`}>
-            Contact Details
-          </h2>
-
-          <p className={`mb-4 ${theme=== "light" ? "text-black" : "text-white"}`}>
-            <strong>Phone:</strong> +91 7982294460
-          </p>
-          <p className={`mb-4 ${theme=== "light" ? "text-black" : "text-white"}`}>
-            <strong>Email:</strong> deep651965@gmail.com
-          </p> */}
-
           <img src="https://assets.dochipo.com/editor/illustrations/contact-us/0eed5ca1-01f2-44d2-80da-d3c2062a7b50.png" alt="" />
 
         </div>

@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { useTheme } from "./Theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
-import resume from "../assets/DEEPAK02.PDF"
+import resume from "../assets/DEEPAK.PDF"
 import logo from '../assets/Logo.png'
 
 
@@ -25,15 +25,15 @@ const Home = (props) => {
     <div className={`flex flex-col min-h-screen `}>
       {/* NAVBAR */}
       <nav className={`${theme === "light" ? "bg-gradient-to-r from-blue-200 via-blue-100 to-cyan-100" : "bg-gray-800"} 
-                        w-full lg:fixed top-0 left-0 z-50 p-4 flex justify-between items-center`}>
+                        w-full lg:fixed top-0 left-0 z-50 p-3 flex justify-between items-center`}>
 
         {/* Logo */}
-        <div className="text-2xl font-bold border-2 text-black">
+        <div className="text-2xl font-bold shadow-md  text-black">
 
           <NavLink to="/" className={`font-bold text-lg ${theme === "light" ? "text-black" : "text-white"} !no-underline`}>
             <img
-            className="h-10"
-            src={logo} alt="" />
+            className="h-14"
+            src={logo} alt="logo" />
           </NavLink>
 
         </div>
@@ -142,7 +142,7 @@ const Home = (props) => {
           <a
             className=" p-1.5 text-white bg-blue-500 !no-underline hover:bg-blue-600 transition-colors duration-200 rounded hover:shadow-xl"
             href={resume}
-            download="resume"
+            download="Deepak_resume"
           >Download CV
           </a>
 

@@ -125,9 +125,29 @@ const Projects = () => {
 
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-7 ">
-            <Cards prjName="TODO List" imgLink={"https://t4.ftcdn.net/jpg/02/89/04/39/360_F_289043915_62E4CSfMrMJeW3JFYnaYUcXZLmgV6iK3.jpg"} lang1="HTML" lang2="CSS" lang3="JavaScript" />
-            <Cards prjName="Project 2" imgLink={"https://designsandlines.co.uk/wp-content/uploads/2021/12/1-100-Half-solid-680x680.jpg"} lang1="HTML" lang2="CSS" lang3="JavaScript" />
-            <Cards prjName="Project 3" imgLink={"https://cdn.dnaindia.com/sites/default/files/2018/09/04/726933-438073-amazon.jpg?im=FitAndFill=(1200,900)"} lang1="Python" lang2="Django" lang3="PostgreSQL" />
+            
+            <Cards 
+              prjName="TODO List" 
+              imgLink={"https://t4.ftcdn.net/jpg/02/89/04/39/360_F_289043915_62E4CSfMrMJeW3JFYnaYUcXZLmgV6iK3.jpg"} 
+              lang1="HTML/CSS" 
+              lang2="JavaScript" 
+              lang3="Local Storage" 
+              prjLink="https://deepakchauhan33.github.io/TODO-Liist/"
+              prjCode="https://github.com/DeepakChauhan33/TODO-Liist" />
+            <Cards 
+              prjName="Number Game" 
+              imgLink={"https://designsandlines.co.uk/wp-content/uploads/2021/12/1-100-Half-solid-680x680.jpg"} 
+              lang1="HTML" 
+              lang2="CSS" 
+              lang3="JavaScript" 
+              prjLink="https://number-game-eosin-rho.vercel.app/"
+              prjCode="https://github.com/DeepakChauhan33/Number-Game" />
+            <Cards 
+              prjName="Project 3" 
+              imgLink={"https://cdn.dnaindia.com/sites/default/files/2018/09/04/726933-438073-amazon.jpg?im=FitAndFill=(1200,900)"} 
+              lang1="Python" 
+              lang2="Django" 
+              lang3="PostgreSQL" />
           </div>
         </div>
       </section>

@@ -124,7 +124,7 @@ const Projects = () => {
         max-w-7xl mx-auto sm:px-4 text-center mt-4 border-b-2`}>
 
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-7 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 p-7 ">
             
             <Cards 
               prjName="TODO List" 

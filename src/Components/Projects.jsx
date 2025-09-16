@@ -145,9 +145,7 @@ const Projects = () => {
             <Cards 
               prjName="Project 3" 
               imgLink={"https://cdn.dnaindia.com/sites/default/files/2018/09/04/726933-438073-amazon.jpg?im=FitAndFill=(1200,900)"} 
-              lang1="Python" 
-              lang2="Django" 
-              lang3="PostgreSQL" />
+              />
           </div>
         </div>
       </section>
